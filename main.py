@@ -7,14 +7,9 @@ def main():
     print()
     char_dict = get_char_counts(text)
     char_list = sorted(char_dict, key=char_dict.get, reverse=True)
-    #char_list.sort(key=sort_on)
     for cd in char_list:
         print(f"The '{cd}' character was found {char_dict[cd]} times")
     print("--- End report ---")
-
-def sort_on(dict):
-    return dict.get
-
 
 def get_char_counts(text):
     lower_text = text.lower()
